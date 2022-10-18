@@ -1,15 +1,14 @@
-import {configureStore} from '@reduxjs/toolkit';
-import {createLogger} from 'redux-logger';
-import messagesSlice from './messageSlice';
+import { configureStore } from '@reduxjs/toolkit';
+import { createLogger } from 'redux-logger';
+import messageReducer from './messageSlice';
 
-const logger = createLogger()
+const logger = createLogger();
 
 const store = configureStore({
-    reducer: {
-        messages: messagesSlice,
-    },
-
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  reducer: {
+    message: messageReducer,
+  },
+  middleware: (getDefaultMiddleware) => [...getDefaultMiddleware(), logger],
 });
 
 export default store;

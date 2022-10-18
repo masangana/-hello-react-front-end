@@ -2,33 +2,43 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
-    messages: [],
-    loading: false,
-    hasErrors: false,
+  loading: false,
+  messages: [],
+  error: '',
 };
 
-export const loadMessages = createAsyncThunk('messages/loadMessages', async () => axios
-    .get('http://localhost:3000/messages')
-    .then((response) => response.data));
+const config = {
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+  },
+};
 
-const messagesSlice = createSlice({
-    name: 'messages',
-    initialState,
-    reducers: {},
-    extraReducers: {
-        [loadMessages.pending]: (state) => {
-            state.loading = true;
-        },
-        [loadMessages.fulfilled]: (state, { payload }) => {
-            state.messages = payload;
-            state.loading = false;
-            state.hasErrors = false;
-        },
-        [loadMessages.rejected]: (state) => {
-            state.loading = false;
-            state.hasErrors = true;
-        }
-    }
+// Generated pending, fulfilled and rejected action types
+export const fetchMessages = createAsyncThunk('message/fetchMessages', () => axios
+  .get('http://localhost:3000/api/v1/messages', config)
+  .then((response) => response.data));
+
+const messageSlice = createSlice({
+  /* eslint-disable no-param-reassign */
+  name: 'message',
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(fetchMessages.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(fetchMessages.fulfilled, (state, action) => {
+      state.loading = false;
+      state.messages = action.payload;
+      state.error = '';
+    });
+    builder.addCase(fetchMessages.rejected, (state, action) => {
+      state.loading = false;
+      state.messages = [];
+      state.error = action.error.message;
+    });
+  },
+  /* eslint-enable no-param-reassign */
 });
 
-export default messagesSlice.reducer;
+export default messageSlice.reducer;
