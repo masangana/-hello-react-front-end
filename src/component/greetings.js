@@ -18,10 +18,9 @@ export const Greetings = () => {
             ) : (
                 
                 <div>
-
-                    {  
+                    {console.log(message.messages)}
+                    {     
                         
-
                         Object.keys(message.messages.data).map((key) => {
                             return (
                                 <div key={key}>
@@ -29,10 +28,7 @@ export const Greetings = () => {
                                 </div>
                             );
                         })
-
-                    }
-                       
-                    
+                    }  
                 </div>
             )} 
 
