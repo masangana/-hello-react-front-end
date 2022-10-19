@@ -1,62 +1,78 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Hello-React-Front-End
 
-> Description the project.
+> This is an educational project to set up a "Hello world" project as two separated apps.
+Front-End: [Hello-Rails-Back-End](https://github.com/masangana/hello-rails-back-end)
 
+## Built With 🛠️
 
-## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
+- [x] Programming Language: [Ruby](https://www.ruby-lang.org/en/)
+- [x] Framework: [Ruby on Rails](https://rubyonrails.org/), [React](https://reactjs.org/)
+- [x] Linter: [Rubocop](https://rubocop.org/), [stylelint](https://stylelint.io/)
+- [x] Code Editor: [VS Code](https://code.visualstudio.com/)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
+- [x] A web browser like Google Chrome.
+- [x] A code editor like Visual Studio Code with Git and Ruby.
+
+You can check if Git is installed by running the following command in the terminal.
+```
+$ git --version
+```
+
+Likewise for Ruby installation.
+```
+$ ruby --version && irb
+```
+
+To install rails, in the terminal kindly run this command
+```
+$ gem install rails
+```
+
 ### Setup
+
+Clone the repository using the GitHub link provided below.
 
 ### Install
 
+In the terminal, go to your file directory and run this command.
+
+```
+$ gh repo clone masangana/hello-rails-back-end
+```
+
 ### Usage
 
-### Run tests
+Kindly modify the files as needed.
 
-### Deployment
+You can run this command below:
+
+```
+$ npm start
+```
 
 
+## Author
 
-## Authors
+👤 **Alex Masangana**
 
-👤 **Author1**
+  - GitHub: [![GitHub Badge](https://img.shields.io/badge/-Alexander-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/masangana)
+  - Twitter: [![Twitter Badge](https://img.shields.io/badge/-Alexander-white?logo=Twitter&logoColor=1DA1F2&style=plastic)](https://twitter.com/alexmasangana)
+  - Gmail: [![Gmail Badge](https://img.shields.io/badge/-@Alexander-white?logo=Gmail&logoColor=EA4335&style=plastic)](mailto:alexmasangana@gmail.com)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/masangana/hello-react-front-end/issues).
 
 ## Show your support
 
@@ -64,12 +80,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- [Microverse](https://www.microverse.org/)
+- Code Reviewers
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT.md) licensed.
