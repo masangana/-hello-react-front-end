@@ -1,4 +1,3 @@
-
 import './App.css';
 import Greetings from './component/greetings';
 
@@ -8,7 +7,7 @@ function App() {
       <h1>Greeting List</h1>
       <Greetings />
     </div>
-    
+
   );
 }
 

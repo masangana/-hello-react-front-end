@@ -7,7 +7,7 @@ export const Greeting = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchMessages());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -21,7 +21,7 @@ export const Greeting = () => {
       ) : null}
       {!message.loading && message.messages.length ? (
         <ul>
-            
+
           {message.messages.map((message) => (
             <li key={message.greeting}>
               <span>
